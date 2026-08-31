@@ -10,10 +10,10 @@ const FormState = () => {
   });
 
   const handleChange = (e) => {
-    const { id, value } = e.target;
+    const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [id]: value,
+      [name]: value,
     }));
   };
 
@@ -31,6 +31,7 @@ const FormState = () => {
           <input
             type="text"
             id="full_name"
+            name="full_name"
             value={formData.full_name}
             onChange={handleChange}
           />
@@ -40,6 +41,7 @@ const FormState = () => {
           <input
             type="email"
             id="email"
+            name="email"
             value={formData.email}
             onChange={handleChange}
           />
@@ -49,6 +51,7 @@ const FormState = () => {
           <input
             type="password"
             id="password"
+            name="password"
             value={formData.password}
             onChange={handleChange}
           />
@@ -58,6 +61,7 @@ const FormState = () => {
           <input
             type="password"
             id="password_confirmation"
+            name="password_confirmation"
             value={formData.password_confirmation}
             onChange={handleChange}
           />

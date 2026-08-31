@@ -10,10 +10,10 @@ const FormRef = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
-      fullName: fullNameRef.current.value,
+      full_name: fullNameRef.current.value,
       email: emailRef.current.value,
       password: passwordRef.current.value,
-      passwordConfirmation: passwordConfirmRef.current.value,
+      password_confirmation: passwordConfirmRef.current.value,
     };
     console.log('Form Submitted via useRef:', formData);
   };
@@ -24,19 +24,19 @@ const FormRef = () => {
       <form id="info-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="full_name">Full Name: </label>
-          <input type="text" id="full_name" ref={fullNameRef} />
+          <input type="text" id="full_name" name="full_name" ref={fullNameRef} />
         </div>
         <div>
           <label htmlFor="email">Email: </label>
-          <input type="email" id="email" ref={emailRef} />
+          <input type="email" id="email" name="email" ref={emailRef} />
         </div>
         <div>
           <label htmlFor="password">Password: </label>
-          <input type="password" id="password" ref={passwordRef} />
+          <input type="password" id="password" name="password" ref={passwordRef} />
         </div>
         <div>
           <label htmlFor="password_confirmation">Password Confirmation: </label>
-          <input type="password" id="password_confirmation" ref={passwordConfirmRef} />
+          <input type="password" id="password_confirmation" name="password_confirmation" ref={passwordConfirmRef} />
         </div>
         <button type="submit">Submit</button>
       </form>
